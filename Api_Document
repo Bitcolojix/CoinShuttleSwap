@@ -1,61 +1,25 @@
-[The GraphiQL](https://thegraph-ui.shulik.xyz/subgraphs/name/btcix/shuttleswap/graphql?query=query+MyQuery+%7B%0A++users+%7B%0A++++id%0A++%7D%0A++uniswapFactories+%7B%0A++++id%0A++%7D%0A++uniswapDayDatas+%7B%0A++++id%0A++%7D%0A++transactions+%7B%0A++++id%0A++%7D%0A++tokens+%7B%0A++++id%0A++%7D%0A++tokenDayDatas+%7B%0A++++id%0A++%7D%0A++swaps+%7B%0A++++id%0A++%7D%0A++pairs+%7B%0A++++id%0A++%7D%0A++pairHourDatas+%7B%0A++++id%0A++%7D%0A%7D)
-
-
-
-# Shuttleswap Beta_V1 Subgraph
-
-[Shuttleswap](https://shuttleswap.org/) is a decentralized protocol for automated token exchange on Btcix.
-
-This subgraph dynamically tracks any pair created by the shuttleswap factory. It tracks of the current state of shuttleswap contracts, and contains derived stats for things like historical data and USD prices.
-
-- aggregated data across pairs and tokens,
-- data on individual pairs and tokens,
-- data on transactions
-- data on liquidity providers
-- historical data on shuttleswap, pairs or tokens, aggregated by day
-
-## Running Locally
-
-Make sure to update package.json settings to point to your own graph account.
-
-## Queries
-
-Below are a few ways to show how to query the uniswap-subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the [querying api](https://thegraph.com/docs/graphql-api). These queries can be used locally or in The Graph Explorer playground.
-
-## Key Entity Overviews
-
-#### ShuttleswapFactory
-
-Contains data across all of Uniswap V2. This entity tracks important things like total liquidity (in Btcix and USD, see below), all time volume, transaction count, number of pairs and more.
-
-#### Token
-
-Contains data on a specific token. This token specific data is aggregated across all pairs, and is updated whenever there is a transaction involving that token.
-
-#### Pair
-
-Contains data on a specific pair.
-
-#### Transaction
-
-Every transaction on Uniswap is stored. Each transaction contains an array of mints, burns, and swaps that occured within it.
-
-#### Mint, Burn, Swap
-
-These contain specifc information about a transaction. Things like which pair triggered the transaction, amounts, sender, recipient, and more. Each is linked to a parent Transaction entity.
-
-## Example Queries
-
-### Querying Aggregated Shuttleswap Data
-
-This query fetches aggredated data from all uniswap pairs and tokens, to give a view into how much activity is happening within the whole protocol.
-
-```graphql
-{
-  uniswapFactories(first: 1) {
-    pairCount
-    totalVolumeUSD
-    totalLiquidityUSD
-  }
-}
-```
+<p>You Can Access All Api Endpoints From The Link Below</p>
+<p>[<span style="color: #ff0000;"><a style="color: #ff0000;" href="https://thegraph-ui.shulik.xyz/subgraphs/name/btcix/shuttleswap/graphql?query=query+MyQuery+%7B%0A++users+%7B%0A++++id%0A++%7D%0A++uniswapFactories+%7B%0A++++id%0A++%7D%0A++uniswapDayDatas+%7B%0A++++id%0A++%7D%0A++transactions+%7B%0A++++id%0A++%7D%0A++tokens+%7B%0A++++id%0A++%7D%0A++tokenDayDatas+%7B%0A++++id%0A++%7D%0A++swaps+%7B%0A++++id%0A++%7D%0A++pairs+%7B%0A++++id%0A++%7D%0A++pairHourDatas+%7B%0A++++id%0A++%7D%0A%7D" target="_blank">The GraphiQL</a></span>] (Please Don't Forget To Click On Explorer)</p>
+<p># Shuttleswap Beta_V1 Subgraph</p>
+<p>[<a href="https://www.shuttleswap.org/" target="_blank">Shuttleswap</a>](https://shuttleswap.org/) is a decentralized protocol for automated token exchange on Btcix.</p>
+<p>This subgraph dynamically tracks any pair created by the shuttleswap factory. It tracks of the current state of shuttleswap contracts, and contains derived stats for things like historical data and USD prices.</p>
+<p>- aggregated data across pairs and tokens,<br />- data on individual pairs and tokens,<br />- data on transactions<br />- data on liquidity providers<br />- historical data on shuttleswap, pairs or tokens, aggregated by day</p>
+<p>## Running Locally</p>
+<p>Make sure to update package.json settings to point to your own graph account.</p>
+<p>## Queries</p>
+<p>Below are a few ways to show how to query the uniswap-subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the [querying api](https://thegraph.com/docs/graphql-api). These queries can be used locally or in The Graph Explorer playground.</p>
+<p>## Key Entity Overviews</p>
+<p>#### ShuttleswapFactory</p>
+<p>Contains data across all of Uniswap V2. This entity tracks important things like total liquidity (in Btcix and USD, see below), all time volume, transaction count, number of pairs and more.</p>
+<p>#### Token</p>
+<p>Contains data on a specific token. This token specific data is aggregated across all pairs, and is updated whenever there is a transaction involving that token.</p>
+<p>#### Pair</p>
+<p>Contains data on a specific pair.</p>
+<p>#### Transaction</p>
+<p>Every transaction on Uniswap is stored. Each transaction contains an array of mints, burns, and swaps that occured within it.</p>
+<p>#### Mint, Burn, Swap</p>
+<p>These contain specifc information about a transaction. Things like which pair triggered the transaction, amounts, sender, recipient, and more. Each is linked to a parent Transaction entity.</p>
+<p>## Example Queries</p>
+<p>### Querying Aggregated Shuttleswap Data</p>
+<p>This query fetches aggredated data from all uniswap pairs and tokens, to give a view into how much activity is happening within the whole protocol.</p>
+<p>```graphql<br />{<br />uniswapFactories(first: 1) {<br />pairCount<br />totalVolumeUSD<br />totalLiquidityUSD<br />}<br />}<br />```</p>
