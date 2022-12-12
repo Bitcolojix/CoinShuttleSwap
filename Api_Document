@@ -1,5 +1,7 @@
 You Can Access All Api Endpoints From The Link Below
 
+https://thegraph-ui.shulik.xyz/subgraphs/name/btcix/shuttleswap/graphql?query=query+MyQuery+%7B%0A++users+%7B%0A++++id%0A++%7D%0A++uniswapFactories+%7B%0A++++id%0A++%7D%0A++uniswapDayDatas+%7B%0A++++id%0A++%7D%0A++transactions+%7B%0A++++id%0A++%7D%0A++tokens+%7B%0A++++id%0A++%7D%0A++tokenDayDatas+%7B%0A++++id%0A++%7D%0A++swaps+%7B%0A++++id%0A++++pair+%7B%0A++++++createdAtBlockNumber%0A++++++id%0A++++%7D%0A++%7D%0A++pairs+%7B%0A++++id%0A++%7D%0A++bundle%28id%3A+%220x01f69aefdb0ade89bc8f8dd9712c4cc4899621e2%22%29+%7B%0A++++id%0A++%7D%0A++uniswapFactory%28id%3A+%220x1763d5e86452ed9c13b874fde60a0669d11c5d40%22%29+%7B%0A++++id%0A++%7D%0A%7D
+
 [The GraphiQL] (Please Don't Forget To Click On Explorer)
 
 # Shuttleswap Beta_V1 Subgraph
